@@ -6,6 +6,14 @@
 #include <crtdbg.h>
 #endif
 
+#if __cplusplus < 201103L
+	// C++03
+	#define nullptr (NULL)
+#endif
+
+// for uint32_t, etc.
+#include <stdint.h>
+
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
